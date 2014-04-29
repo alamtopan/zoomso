@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!--begin head-->
+   <head>
+      <meta charset="utf-8" />
+      <title>Zoomso</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- set content to full screen on iphones -->
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <!--[if lte IE 6]>
+      <link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+      <![endif]-->
+      <!--[if !lte IE 6]><!-->
+      <!-- Load Google Web Font -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
+      <!-- Load style.css: contains all css files concatenated to one single file -->
+      <link href="css/style.css" rel="stylesheet" />
+      <!--<![endif]-->
+      <!-- Load HTMLShiv for IE9 HTML5 support -->
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->	
+      <!-- Your Favoriate Icons -->
+      <link rel="shortcut icon" href="ico/favicon.ico" />
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+      <!--
+         NOTE: All the javascripts have been moved to the bottom of the page to load the content faster.
+         -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script src="js/jquery.1.8.3.min.js" type="text/javascript"></script>
+   </head>
+  <!--end head-->
+  <!--begin body-->
+  <body>
+    <header class="row-fluid"><div class="container">
+      <!--logo area start-->
+      <div class="span5 logo-area">
+        <a href="index.html"><span id="logo" class="row-fluid"><img src="img/logo.png" alt=""/></span></a>
+      </div>
+      <!--end logo area-->
+      
+      <div class="span4 languange">
+      	<div class="span6 pull-left ina">
+      		<img src="img/ina.png" alt="">
+      		<a href="#">Bahasa Indonesia</a>
+      	</div>
+      	<div class="span6 pull-left eng">
+      		<img src="img/eng.png" alt="">
+      		<a href="#">English</a>
+      	</div>
+      </div>
+
+      <div class="span3 pull-right user">
+      	<a href="#">Message</a> |
+      	<a href="#">Friend</a> |
+      	<a href="#">Posting</a>
+      	<img src="img/user.png" alt=""/>
+      </div>
+    </div></header>
+    <section class="row-fluid" style="min-height: 0;">
+      <!--nav bar start-->
+      <nav class="container-fluid navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <!--mobile nav icon (hidden:CSS)-->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+            menu
+            </a><!--end btn-navbar-->
+            <div class="nav-collapse">
+              <ul class="nav">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="list-hotel.html">Hotel</a>
+                </li>
+                <li>
+                  <a href="grid-hotel.html">Town</a>
+                </li>
+                <li>
+                  <a href="contact.html">Contact Us</a>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Sub Menu 1</a>
+                    </li>
+                    <li>
+                      <a href="#">Sub Menu 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Sub Menu 3</a>
+                    </li>
+                    <li>
+                      <a href="#">Sub Menu 4</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- end nav-collapse -->
+          </div>
+          <!-- end container-->
+        </div>
+        <!-- end navbar-inner -->
+      </nav>
+    </section>
+		<section id="main">
+			<div class="body-text">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<div class="span9 listing-js">
+							<div class="row-fluid townimg-detail">
+								<img src="img/town/borobudur.jpg" alt=""/>
+							</div>
+							<!-- page title with dropdown -->
+							<h1>List Hotel from this town (List)</h1>
+							<div class="row-fluid">
+								<div class="span12">
+									<div class="span6 dropdown-results">
+										<p>Showing 1 - 8 of 255 results</p>
+									</div>
+									<div class="span4">
+									  <select id="sort" data-placeholder="-- Sort by --" class="chzn-select" style="width:100%;" tabindex="0">
+											<option value="pmrank" />Sort by Popularity
+											<option value="price" />Sort by Price: Low to High
+											<option value="-price" />Sort by Price: High to Low
+									  </select>
+									</div>
+									<div class="span2 view-mode">
+										<a href="grid-hotel.html"><img src="img/grid.png" alt=""/></a>
+										<a><img src="img/list.png" alt=""/></a>
+									</div>
+								</div>
+							</div>
+							<!-- end page title -->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house1.jpg" alt="123 McLevin Avn, Scarborough ON" /></a>
+										<span class="sticker sticker-hot">Hot</span>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">123 McLevin Avn, Scarborough ON</a>
+										<p class="size">Bedrooms: 2 • Bathrooms: 1 • Parking 2</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$159,000</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house2.jpg" alt="Placeholder Image" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">43 Heros Avn, GTA ON</a>
+										<p class="size">Bedrooms: 3 • Bathrooms: 2 • Parking 2</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$159,000</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house3.jpg" alt="Placeholder Image" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">Costorica Palace, Toronto ON</a>
+										<p class="size">Bedrooms: 5 • Bathrooms: 2 • Parking 2</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$159,000</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house4.jpg" alt="Placeholder Image" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">Grizzly Rd, Toronto ON</a>
+										<p class="size">Bedrooms: 3 • Bathrooms: 2 • Parking 2</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$300,000</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house5.jpg" alt="P66 Covenant Street, Scarborough ON" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">66 Covenant Street, Scarborough ON</a>
+										<p class="size">Bedrooms: 1 • Bathrooms: 1 • Parking 1</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$149,500</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house6.jpg" alt="87 Brimly South, Toronto ON" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">87 Brimly South, Toronto ON</a>
+										<p class="size">Bedrooms: 3 • Bathrooms: 2 • Parking 1</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$359,999</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!--start list-->
+							<div class="row-fluid">
+								<div class="span12 list-item">
+									<div class="span4">
+										<a href="property.html"><img src="img/demo/houses/house7.jpg" alt="Placeholder Image" /></a>
+									</div>
+									<div class="span8">
+										<a href="property.html" class="prop-title">450 Jorh Avn, Toronto ON</a>
+										<p class="size">Bedrooms: 3 • Bathrooms: 2 • Parking 2</p>
+										<p class="description">
+											Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. 
+										</p>
+										<p class="price">$399,000</p>
+										<!-- Short List Btns -->
+										<ul class="list-btns">
+											<li><a href="#"><i class="icon-map-marker"></i>View Map</a></li>
+											<li class="pull-right"><a class="btn btn-primary" href="property.html">Book Now</a></li>
+										</ul>
+										<!-- end short list -->
+									</div>
+								</div>
+							</div>
+							<!--end list-->
+							
+							<!-- start paging -->
+							<div class="row-fluid">
+								<div class="row-fluid" style="border:none;">
+									<div class="span12">
+										<div class="pagination pagination-centered">
+							              <ul>
+							                <li><a href="javascript:void(0)">« Prev.</a></li>
+							                <li><a href="javascript:void(0)">1</a></li>
+							                <li><a href="javascript:void(0)">2</a></li>
+							                <li><a href="javascript:void(0)">3</a></li>
+							                <li><a href="javascript:void(0)">4</a></li>
+							                <li><a href="javascript:void(0)">5</a></li>
+							                <li><a href="javascript:void(0)">6</a></li>
+							                <li><a href="javascript:void(0)">7</a></li>
+							                <li><a href="javascript:void(0)">8</a></li>
+							                <li><a href="javascript:void(0)">Next »</a></li>
+							              </ul>
+							            </div>
+									</div>
+								</div>
+							</div>
+							<!-- end paging -->
+						</div>
+						<!-- end listing-js -->
+						
+						<div class="span3">
+							<!--
+								"Quick Search" Widget
+								
+								SPECIAL NOTE: Please leave the inline style for <Select></Select> "width:100%",
+											  the width is automatically "Re-adjusted" with javascript
+											  See "config.js" for more details	
+							-->	
+							<div class="qbox">
+				            	<h3><i class="icon-search pull-right"></i>SEARCH FILTER</h3>
+								<form />
+				                	<div>
+				                        <label>Property Type</label>
+				                        <select data-placeholder="-- For Sale --" class="chzn-select" style="width:100%;" tabindex="0">
+				                            <option value="ForSale" />For Sale
+				                            <option value="ForRent" />For Rent
+				                            <option value="CommercialSale" />Commercial For Sale
+				                            <option value="CommercialLease" />Commercial For Lease
+				                        </select>
+				                    </div>
+				                	<div>
+				                        <label>Select Province</label>
+				                        <select data-placeholder="-- Select Province --" class="chzn-select" style="width:100%;" tabindex="0">
+											<option value="Ontario" />Ontario
+											<option value="Quebec" />Quebec
+											<option value="Nova Scotia" />Nova Scotia
+											<option value="New Brunswick" />New Brunswick
+											<option value="Manitoba" />Manitoba
+											<option value="British Columbia" />British Columbia
+											<option value="Prince Edward Island" />Prince Edward Island
+											<option value="Saskatchewan" />Saskatchewan
+											<option value="Alberta" />Alberta
+											<option value="Newfoundland and Labrador" />Newfoundland and Labrador
+				                        </select>
+				                    </div>
+				                    <div>
+				                        <label>Select a suburb</label>
+				                        <select data-placeholder="-- Available Cities --" multiple="multiple" class="chzn-select" style="width:100%;" tabindex="0">
+											<option value="Guelph" />Guelph
+											<option value="Haldimand" />Haldimand
+											<option value="Halton Hills" />Halton Hills
+											<option value="Hamilton" />Hamilton
+											<option value="Hawkesbury" />Hawkesbury
+											<option value="Huntsville" />Huntsville
+											<option value="Ingersoll" />Ingersoll
+											<option value="Innisfil" />Innisfil (Alcona-Lefroy-Gilford)
+											<option value="Kawartha" />Kawartha Lakes (Lindsay)
+											<option value="Kenora" />Kenora
+											<option value="Kingston" />Kingston
+											<option value="Kingsville" />Kingsville
+											<option value="Kitchener" />Kitchener
+											<option value="Lakeshore" />Lakeshore (Belle River-Tilbury)
+											<option value="LaSalle" />LaSalle
+											<option value="Leamington" />Leamington
+											<option value="Lincoln" />Lincoln (Beamsville-Vineland)
+											<option value="London" />London
+											<option value="Markham" />Markham
+											<option value="Midland" />Midland
+											<option value="Milton" />Milton
+											<option value="Mississauga" />Mississauga
+											<option value="Mississippi" />Mississippi Mills (Almonte)
+											<option value="Napanee" />Napanee (Greater Napanee)
+											<option value="Newmarket" />Newmarket
+											<option value="Tecumseth" />New Tecumseth (Alliston)
+											<option value="Niagara" />Niagara Falls
+											<option value="Niagara-lake" />Niagara-on-the-Lake
+											<option value="Norfolk" />Norfolk (Simcoe-Port Dover)
+											<option value="North-bay" />North Bay
+											<option value="Oakville" />Oakville
+											<option value="Orangeville" />Orangeville
+											<option value="Orillia" />Orillia
+											<option value="Oshawa" />Oshawa
+											<option value="Ottawa" />Ottawa
+											<option value="Owen" />Owen Sound
+											<option value="Pelham" />Pelham
+											<option value="Pembroke" />Pembroke
+											<option value="Petawawa" />Petawawa
+											<option value="Peterborough" />Peterborough
+											<option value="Pickering" />Pickering
+											<option value="Port-C" />Port Colborne
+											<option value="Port-H" />Port Hope
+											<option value="Prince" />Prince Edward (Picton)
+											<option value="Quinte" />Quinte West (Trenton)
+											<option value="Richmond" />Richmond Hill
+											<option value="Sarnia" />Sarnia	City
+											<option value="Saugeen" />Saugeen Shores
+											<option value="Sault" />Sault Ste. Marie
+											<option value="Catharines" />St. Catharines
+											<option value="Thomas" />St. Thomas
+											<option value="Stratford" />Stratford
+											<option value="Tecumseh" />Tecumseh
+											<option value="Temiskaming" />Temiskaming Shores
+											<option value="Thorold" />Thorold
+											<option value="Thunder" />Thunder Bay
+											<option value="Tillsonburg" />Tillsonburg
+											<option value="Timmins" />Timmins
+											<option value="Toronto" />Toronto
+											<option value="Vaughan" />Vaughan
+											<option value="Wasaga" />Wasaga Beach
+											<option value="Waterloo" />Waterloo
+											<option value="Welland" />Welland
+											<option value="Whitby" />Whitby
+											<option value="Whitchurch" />Whitchurch-Stouffville
+											<option value="Windsor" />Windsor
+											<option value="Woodstock" />Woodstock
+				                        </select>
+				                    </div>  
+
+				                	<div>
+				                        <label>Facilities</label>
+				                        <select data-placeholder="-- Facilities --" multiple="multiple" class="chzn-select" style="width:100%;" tabindex="0">
+				                            <option value="Wifi" />Wifi
+				                            <option value="AC" />Full AC
+				                            <option value="Swimmingpoll" />Swimming Pool
+				                            <option value="Garden" />Garden
+				                            <option value="Wifi" />Wifi
+				                        </select>
+				                    </div>
+				                    <div>
+				                        <p>
+				                            <input type="text" id="beds" readonly="" class="disabled" />
+				                        </p>
+
+				                   		<div id="ui-slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				                        	<div class="ui-slider-range ui-widget-header"></div>
+				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				                        </div>
+				                    </div>
+				                    <div>
+				                        <p>
+				                            <input type="text" id="amount" readonly="" class="disabled" style="margin-top:10px;" />
+				                        </p>
+				                    
+				                   		<div id="ui-slider-price" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				                        	<div class="ui-slider-range ui-widget-header"></div>
+				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				                            <a class="ui-slider-handle ui-state-default ui-corner-all" href="javascript:void(0)"></a>
+				                        </div>
+				                    </div>
+				                    <button class="btn btn-block btn-primary btn-small">Search</button>
+				                </form>
+				            </div>
+							<!-- // MY SHORT LIST // -->
+				        	<div class="qbox">
+				            	<h3>My Short List <label class="badge badge-important pull-right" id="short-list-count-js">0</label></h3>
+				                <div>
+				                	<!-- dummy short list items -->
+				                	<ol class="shortlist">
+										<li>
+											<img src="http://placehold.it/48x42/E37F14/FFFFFF" alt="Placeholder Image" />
+											<div>
+												<a href="javascript:void(0);">Avelancher Village Inn</a>
+												$700
+											</div>
+										</li>
+										<li>
+											<img src="http://placehold.it/48x42/E37F14/FFFFFF" alt="Placeholder Image" />
+											<div>
+												<a href="javascript:void(0);">City Center Condo</a>
+												$1200
+											</div>
+										</li>
+										<li>
+											<img src="http://placehold.it/48x42/E37F14/FFFFFF" alt="Placeholder Image" />
+											<div>
+												<a href="javascript:void(0);">Isla Cottage</a>
+												$1700
+											</div>
+										</li>
+				                	</ol>
+				                	<!-- end dummy short list items -->
+				                	<ol id="show-items" class="shortlist">
+				                	</ol>
+				                    <a href="javascript:void(0);" class="link" id="clear-all">Clear List</a>
+				                </div>
+				       	 	</div><!--/end my short list-->
+						</div>
+						<!-- end span3 -->					
+					</div>
+					<!-- end row-fluid -->
+				</div>
+				<!-- end container-fluid -->
+			</div>
+			<!-- end body-text -->
+		</section>
+		<!-- end section -->
+    <footer>
+          <div class="row footer-links">
+            <!-- Copyright info and links -->
+            <div class="">
+              <div class="span2">
+                <p>Renting</p>
+                <ul>
+                  <li><a href="javascript:void(0);">Properties for Rent</a></li>
+                  <li><a href="javascript:void(0);">Open Home</a></li>
+                  <li><a href="javascript:void(0);">Rental Property Alert</a></li>
+                  <li><a href="javascript:void(0);">Tenancy Application Forms</a></li>
+                </ul>
+              </div>
+              <div class="span2">
+                <p>Buying</p>
+                <ul>
+                  <li><a href="javascript:void(0);">Properties for Sale</a></li>
+                  <li><a href="javascript:void(0);">Sold Properties</a></li>
+                  <li><a href="javascript:void(0);">Open Homes</a></li>
+                  <li><a href="javascript:void(0);">Sale Property Alert</a></li>
+                </ul>
+              </div>
+              <div class="span2">
+                <p>About Us</p>
+                <ul>
+                  <li><a href="javascript:void(0);">Home Page</a></li>
+                  <li><a href="javascript:void(0);">Company Profile</a></li>
+                  <li><a href="javascript:void(0);">Staff Profiles</a></li>
+                  <li><a href="javascript:void(0);">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="span2">
+                <p>Selling</p>
+                <ul>
+                  <li><a href="javascript:void(0);">Selling your Home</a></li>
+                  <li><a href="javascript:void(0);">Request Market Appraisal</a></li>
+                  <li><a href="javascript:void(0);">Commercial For Sale</a></li>
+                  <li><a href="javascript:void(0);">Request Market Appraisal</a></li>
+                </ul>
+              </div>
+              <div class="span4">
+                <div>
+                  <p>Our Tweets<i class="icon-twitter pull-right"></i></p>
+                  <div class="tweet"><p class="loading">loading ...</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row contact-info">
+            <span class="span9">
+            Copyright <strong>ZOOMSO</strong> 2013 - <a href="mailto:companyName@email.com"> zoomso@email.com</a>
+            </span>
+            <ul class="span3 social-network">
+              <li><a href="javascript:void(0)"><i class="icon-linkedin-sign"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="icon-pinterest-sign"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="icon-twitter-sign"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="icon-facebook-sign"></i></a></li>
+              <li><a href="javascript:void(0)"><i class="icon-google-plus-sign"></i></a></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+      <!-- end container-fluid -->
+    </footer>
+    <!-- end footer -->
+    <!--[if !lte IE 6]><!-->
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+    <script src="js/jquery-ui.1.8.3.min.js"></script>
+    <script>window.jQuery.ui || document.write('<script src="js/libs/jquery.ui.min.js"><\/script>')</script>
+    <!-- RECOMMENDED: For (IE6 - IE8) CSS3 pseudo-classes and attribute selectors -->
+    <!--[if lt IE 9]> 
+    <script src="js/include/selectivizr.min.js"></script> 					
+    <![endif]-->
+    <script src="js/libs/jquery.ui.touch-punch.min.js"></script>				<!-- REQUIRED:  A small hack that enables the use of touch events on mobile -->
+    <!-- Add 'http:' for testing locally -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script><script src="http://maps.gstatic.com/intl/en_us/mapfiles/api-3/14/14/main.js" type="text/javascript"></script>
+    <script src="js/menu/jquery.ct.3LevelAccordion.min.js"></script>     		<!-- REQUIRED: Accordion Menu with filter-->
+    <script src="js/slider/jquery.responsivethumbnailgallery.min.js"></script>  <!-- REQUIRED: Responsive Gallery Plugin -->
+    <script src="js/slider/jquery.onebyone.min.js"></script>     				<!-- REQUIRED: Slider Plugin -->
+    <script src="js/slider/jquery.touchwipe.min.js"></script>    				<!-- REQUIRED: Plugin to make Slider Plugin work on Touch Devices -->
+    <script src="js/slider/jquery.onebyone.min.js"></script>     				<!-- REQUIRED: Slider Plugin -->
+    <script src="js/slider/jquery.touchwipe.min.js"></script>    				<!-- REQUIRED: Plugin to make Slider Plugin work on Touch Devices -->
+    <script src="js/include/jquery.fitvids.min.js"></script>     		 		<!-- RECOMMENDED: Responsive videos -->			
+    <script src="js/include/jquery.tweet.min.js"></script>     		 			<!-- OPTIONAL: Twitter display plugin -->
+    <script src="js/include/jquery.equal-heights.min.js"></script> 	 			<!-- RECOMMENDED: Plugin to keep div heights consistant -->	
+    <script src="js/include/jquery.todo.min.js"></script>					 	<!-- REQUIRED: Plugin to save "add to short list" items -->
+    <script src="js/include/jquery.pubsub.min.js"></script>				 		<!-- REQUIRED: (If todo.js is in use) Dependent with todo.js -->
+    <script src="js/include/jquery.select2.min.js"></script>			 		<!-- RECOMMENDED: Custom jQuery/searchable dropdowns -->	
+    <script src="js/include/bootstrap.min.js"></script> 			 			<!-- REQUIRED: For BootStrap build -->
+    <script src="js/config.js"></script>						 				<!-- DO NOT REMOVE: Contains major plugin initiations and functions -->
+    <!--<![endif]-->
+
+	</body>
+</html>

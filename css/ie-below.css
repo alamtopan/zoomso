@@ -1,0 +1,25 @@
+.ie-popup{
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -90px;
+	margin-left: -240px;
+	background: #FFFFFF;
+	min-height: 180px;
+	width: 480px;
+	z-index: 9999;
+	border: 1px solid red;
+}
+
+.ie-popup img{
+	float: right; 
+	margin: 10px;
+	cursor: hand;
+}
+
+.ie-popup h4{
+	float: left;
+	margin: 0 30px 30px 30px;
+	line-height: 27px;
+}
